@@ -10,18 +10,29 @@ function addItem(item){
         basket.push( item);
 return true;
 }
+//Testing addItem function...
 console.log(addItem('bread'));
 console.log( addItem('milk'));
 console.log( addItem('cereal'));
 // Function works in the console
 
+
 function listItems(){
     console.log('In listItems function');
-for(i=0; i < basket.length; i++){
-    console.log(basket[ i ]);
-    
+        for(i=0; i < basket.length; i++){
+        console.log(basket[ i ]);
+        
 }return 'List Complete';
 }
 
 console.log(listItems());
-// Function woroks in console.
+// Function works in console.
+
+function empty(){
+    console.log('In empty function');
+    basket.length = 0;
+return 'Basket is empty';
+}
+
+
+console.log('The basket should be empty:', empty(basket));
