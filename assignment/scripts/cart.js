@@ -3,17 +3,28 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 //Update the `cart.js` file to do the following:
 
+
+
+const maxItems = 5;
 let basket = [];
 
 function addItem(item){
-    console.log('added item', item);
-        basket.push( item);
-return true;
+ console.log('added item', item);
+ if(basket.push(item)){
+    return true;
+ }
+ else{
+    addItem == isFull;
+    return false;
+ }
 }
 //Testing addItem function...
 console.log(addItem('bread'));
 console.log( addItem('milk'));
 console.log( addItem('cereal'));
+console.log( addItem('cookies'));
+console.log(addItem('pop'));
+console.log(addItem('cake'));
 // Function works in the console
 
 
@@ -36,3 +47,21 @@ return 'Basket is empty';
 
 
 console.log('The basket should be empty:', empty(basket));
+
+
+function isFull(){
+console.log('In isFull function');
+    if (maxItems < basket.length){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+
+
+
+function removeItem(item){
+console.log('In removeItem function'), item;
+}
